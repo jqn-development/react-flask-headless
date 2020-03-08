@@ -1,16 +1,15 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles(theme => ({
-  appBar: {},
+  appBar: { boxShadow: "none" },
   menuButton: {
     marginRight: theme.spacing(2),
   },
@@ -23,9 +22,15 @@ const useStyles = makeStyles(theme => ({
   loginLink: {
     fontFamily: '"Lora"',
   },
+  flexGrow: {
+    flexGrow: 1,
+  },
+  signOutButton: {
+    marginLeft: theme.spacing(1),
+  },
 }));
 
-export default function Header() {
+const TopBar = () => {
   const classes = useStyles();
 
   return (
@@ -42,11 +47,13 @@ export default function Header() {
           color="inherit"
           aria-label="menu"
         >
-          <MenuIcon />
+          <Link to="/">
+            <Typography variant="h4" className={classes.title}>
+              Reactor Labs
+            </Typography>
+          </Link>
         </IconButton>
-        <Typography variant="h4" className={classes.title}>
-          Reactor Labs
-        </Typography>
+        <div className={classes.flexGrow} />
         <Link to="/login">
           <Button>
             <Typography variant="subtitle1" className={classes.loginLink}>
@@ -57,4 +64,8 @@ export default function Header() {
       </Toolbar>
     </AppBar>
   );
-}
+};
+
+TopBar.propTypes = {};
+
+export default TopBar;
