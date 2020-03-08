@@ -1,6 +1,6 @@
 # Headless React with Flask API example
 
-## Installation - BackEnd
+## Installation - Back-end
 
 Mininum requirements
 
@@ -26,3 +26,14 @@ Step 5. Run the application
 Step 6. Open your browser and point it to this url `http://127.0.0.1:5000/api/v1/soup/getsoup/<add-url-here>`
 
 Example: `http://127.0.0.1:5000/api/v1/soup/getsoup/https://www.ventureharbour.com/10-lead-capture-page-examples-help-capture-leads/`
+
+## Installation - Front-end
+
+- `$ git clone https://github.com/jqn/react-boilerplate.git`
+- `$ cd react-boilerplate`
+- `$ npm install`
+- `$ npm run watch`
+
+## Create a bundle.js
+
+- `$ npm run build`
