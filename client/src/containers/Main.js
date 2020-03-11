@@ -28,9 +28,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     display: "flex",
     alignItems: "center",
-    [theme.breakpoints.down("md")]: {
-      justifyContent: "center",
-    },
+    justifyContent: "center",
   },
   message: {
     paddingLeft: 100,
@@ -57,6 +55,9 @@ const useStyles = makeStyles(theme => ({
   },
   lightText: {
     color: theme.palette.background.default,
+  },
+  primary: {
+    backgroundColor: "#ff5f00",
   },
 }));
 
@@ -85,8 +86,12 @@ const Main = () => {
                   justify="center"
                 >
                   <Grid item>
-                    <Button color="primary" size="large" variant="contained">
-                      <Link className={classes.lightText} to="/login">
+                    <Button
+                      className={classes.primary}
+                      size="large"
+                      variant="contained"
+                    >
+                      <Link className={classes.lightText} to="/sign-in">
                         Login
                       </Link>
                     </Button>

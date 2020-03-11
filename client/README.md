@@ -26,3 +26,11 @@ https://tylermcginnis.com/react-router-cannot-get-url-refresh/
 https://itnext.io/how-eslint-makes-me-a-better-react-developer-237fb14c00ae
 https://blog.miguelgrinberg.com/post/how-to-create-a-react--flask-project
 https://medium.com/javascript-in-plain-english/introduce-babel-new-plugins-to-create-react-app-ea55f56c3811
+
+## Tips
+
+- Use React [Devtools](https://reactjs.org/blog/2019/08/15/new-react-devtools.html) for easier debugging
+
+### Resources
+
+- [Color Picker and Color palette](https://htmlcolorcodes.com/color-picker/)

@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const useStyles = makeStyles(theme => ({
-  appBar: { boxShadow: "none" },
+  appBar: { boxShadow: "none", backgroundColor: "#ff5f00" },
   menuButton: {
     marginRight: theme.spacing(2),
   },

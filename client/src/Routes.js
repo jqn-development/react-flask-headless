@@ -1,12 +1,20 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Switch } from "react-router-dom";
+import { RouteWithLayout } from "./components/routeWithLayout";
+import Public from "./layouts/public";
 import Main from "./containers/Main";
-import RouteWithLayout from "./components/routeWithLayout/RouteWithLayout";
+import SignIn from "./containers/SignIn/SignIn";
 
 const Routes = () => {
   return (
     <Switch>
-      <RouteWithLayout component={Main} path="/" />
+      <RouteWithLayout
+        component={SignIn}
+        exact
+        path="/sign-in"
+        layout={Public}
+      />
+      <RouteWithLayout component={Main} exact path="/" layout={Public} />
     </Switch>
   );
 };

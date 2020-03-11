@@ -1,1 +1,3 @@
-export { RouteWithLayout } from "./RouteWithLayout";
+import RouteWithLayout from "./RouteWithLayout";
+
+export { RouteWithLayout };
